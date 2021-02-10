@@ -23,7 +23,7 @@ const Header = () => {
         </NavLink>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> 
                                 <NavLink class="dropdown-item" to="#">Edit profile</NavLink>
-                                <NavLink class="dropdown-item disabled" to="#">Dark mode</NavLink>
+                                <NavLink class="dropdown-item disabled" to="#">Dark  mode</NavLink>
                                 <div class="dropdown-divider"></div>
                                 <NavLink class="dropdown-item" to="#">Logout</NavLink>
                             </div>
