@@ -1,0 +1,62 @@
+.active {
+    background-color: tomato ;
+} 
+.bg {
+    background-image: url("./bg.png");
+    position: fixed;
+    background-position: center;
+    width: 100% ;
+    height: 100%;
+    background-repeat: no-repeat;
+}
+.btn-register {
+    background-color: #373976;
+    color:#f1a6b6 !important;
+}
+.pubh1 {
+    background-color: #373976;
+    color:#f1a6b6 !important;
+}
+.jedan {
+    background-color: #373976;
+    height: 2000px;
+
+}
+.dva {
+    color: tomato; 
+   
+    position: fixed;
+}
+.reklama {
+    color: black;
+    font-size: 37px;
+}
+.siva {
+    background-color: #F0F0F0;
+    color: black;
+}
+.zuta {
+    background-color: yellow;
+    color: black;
+}
+.crv {
+    background-color: red;
+    color: black;
+}
+.stoposto {
+   width: 100%; 
+   height: 100%;
+}
+.tri {
+   background-color: burlywood;
+}
+.cetri {
+    background-color:darkcyan;
+ }
+ .pet {
+    text-align: center;
+ }
+ .rr {
+    background-color: tomato  ;
+ } 
+
