@@ -10,8 +10,6 @@ const PostMakerSm = ({ post,accounts }) => {
 
 
 
-
-
     return (
         <>
 
@@ -28,10 +26,10 @@ const PostMakerSm = ({ post,accounts }) => {
                 <div className="col-lg-12">
                     <div className="row mb-2">
                         <div className="col-lg-6">
-                            <button className="btn btn-success form-control">1</button>
+                            <button className="btn btn-success form-control">0</button>
                         </div>
                         <div className="col-lg-6">
-                        <button className="btn btn-danger form-control">2</button>
+                        <button className="btn btn-danger form-control">0</button>
 
                         </div>
 

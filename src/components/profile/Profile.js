@@ -1,16 +1,35 @@
 import React from "react"
 import ListOfPostsProfile from "../listOfPostsProfile/ListOfPostsProfile"
+let follower;
 
   
 
-const Profile = ({ posts,accounts,currentAccount }) => {
+const Profile = ({ followersq,posts,accounts,currentAccount,follow }) => {
     
     // let x;
     // if(currentAccount.length === 0) {
     //     x=2
     // }else {x=1}
     // console.log(x)
-    // console.log(currentAccount)
+    if (follow) {
+        follower = followersq(currentAccount.id);
+    }
+    const poziv = () => {
+        followersq(currentAccount.id,currentAccount)
+        let followAction = document.querySelector('#followChanger')
+        if (followAction.textContent === "Follow") {
+            followAction.innerHTML ="Unfollow"
+        } else {
+            followAction.innerHTML ="Follow"
+        }
+    }
+ 
+
+ 
+    const followContent = follow? (
+        <button  onClick={() => { poziv() }} id="followChanger" className="btn btn-lx btn-primary float-right mt-2">{follower ? ("Unfollow") : ("Follow")}</button>
+    ) : null
+    
 
     return (
         <>
@@ -26,17 +45,16 @@ const Profile = ({ posts,accounts,currentAccount }) => {
                                                         <img id="da" src={`${currentAccount.imagelinks}`} alt="profile-ph" class="img-thumbnail m-1" />
                                                     </div>
                                                     <div className="col-lg-9">
-                                                        <h2>{currentAccount.name} {currentAccount.lastname}</h2>
-                                                        <p>Birth date {currentAccount.name}</p>
-                                                        <p>Birth date {currentAccount.name}</p>
-                                                        <p>Birth date {currentAccount.name}</p>
-
-                                                        <p>sdsadasd</p>
+                                                        <h2> <b>{currentAccount.name} {currentAccount.lastname} {followContent}</b></h2>
+                                                        <p>Birth date <b>{currentAccount.datefbirth}</b></p>
+                                                        <p>Address <b>{currentAccount.city}</b></p>
+                                                        <p>Birth date <b>{currentAccount.datefbirth}</b></p>
+                                                        <p>Email <b>{currentAccount.email}</b></p>
                                                     </div>
                                             
                                                 </div>
                                     </div>
-                                    <h2 >Recent posts</h2>
+                                    <h4 >Recent posts:</h4>
                                 <ListOfPostsProfile currentAccount={currentAccount} posts={posts} accounts={accounts}/>
 
                                 </div>
@@ -60,5 +78,4 @@ const Profile = ({ posts,accounts,currentAccount }) => {
         </>
     )
 }
-
 export default Profile
