@@ -2,8 +2,12 @@ import React from "react"
 import { Link, NavLink } from "react-router-dom"
 import { useHistory } from 'react-router-dom';
 
-const Header = ({searchContent}) => {
+const Header = ({searchContent,currentAccount}) => {
     const history = useHistory();
+
+
+
+
 
     const sContent = () =>{
         let sText = document.querySelector('.rounded').value
@@ -38,7 +42,7 @@ const Header = ({searchContent}) => {
                                 Option
                             </NavLink>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <NavLink class="dropdown-item" to="#">Edit profile</NavLink>
+                                <NavLink class="dropdown-item" to="/edit">Edit profile</NavLink>
                                 <NavLink class="dropdown-item" to="#">Show all posts</NavLink>
                                 <NavLink class="dropdown-item disabled" to="#">Dark  mode</NavLink>
                                 <div class="dropdown-divider"></div>

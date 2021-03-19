@@ -2,11 +2,11 @@ import React from "react"
 import PostMaker from "../postMaker/PostMaker"
 
 
-const ListOfPosts = ({selectedAccount,currentAccount1,posts,accounts,addPlus,addMinus}) => {
+const ListOfPosts = ({publish,setPosts,setComments,selectedAccount,currentAccount1,posts,accounts,addPlus,addMinus,comments}) => {
 
 
     const lPosts = posts.slice(0).reverse().map(post=>{
-       return <PostMaker selectedAccount={selectedAccount} addPlus={addPlus} addMinus={addMinus} key={post.idpost} post={post} accounts={accounts} currentAccount1={currentAccount1} />
+       return <PostMaker publish={publish} posts={posts} setPosts={setPosts} setComments={setComments} comments={comments} selectedAccount={selectedAccount} addPlus={addPlus} addMinus={addMinus} key={post.idpost} post={post} accounts={accounts} currentAccount1={currentAccount1} />
     })
    
     return (

@@ -13,7 +13,14 @@ const OneProfile = ({profile,selectedAccount}) =>{
                     <img  src={`${profile.imagelinks}`} alt="profile-photo" class="img-thumbnail rounded-circle m-1" />
                     </NavLink>
                     </div>
-                    <div className="col-9">samo ime</div>
+                    <div className="col-9">
+                    <NavLink  onClick={()=>{selectedAccount(profile.id)}} to={'/profile/' + profile.name+profile.lastname}>
+                    <h3>{profile.name} {profile.lastname}</h3>
+                    </NavLink>
+                        <h5>{profile.city}</h5>
+                        <h5>{profile.datefbirth}</h5>
+                        <h5>{profile.email}</h5>
+                    </div>
                 </div>
             </div>
         </div>

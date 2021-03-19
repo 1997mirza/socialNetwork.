@@ -24,7 +24,7 @@ const Register = ({checkUsername,addNewUser}) => {
         let email = document.querySelector('#e-mail')
         let add = document.querySelector('#address')
         let iLink = document.querySelector('#image-link') 
-        let birtDate = document.querySelector('#bird-date') 
+        let birtDate = document.querySelector('#birth-date') 
         let warning = document.querySelectorAll(".unsuccessfully-username")
         let inputValues = document.querySelectorAll(".selected")
         if (problem) {
@@ -56,8 +56,8 @@ const Register = ({checkUsername,addNewUser}) => {
             }
             let id = addNewUser("number")
             let user = {
-                id: addNewUser("number"), name: fName.value, lastname: lName.value, username:uName.value ,
-                password: pw.value, city: add.value, email: email.value, followers: [], following: [id], datefbirth: birtDate, imagelinks: slika
+                id: id, name: fName.value, lastname: lName.value, username:uName.value ,
+                password: pw.value, city: add.value, email: email.value, followers: [], following: [id], datefbirth: birtDate.value, imagelinks: slika
             }
             setProblem(false)
             addNewUser(user)

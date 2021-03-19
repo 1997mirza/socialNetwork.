@@ -72,6 +72,12 @@
     color: white !important;
     border: none !important;
  } 
+ .plava:focus {
+    background-color: #0275d8  ;
+    box-shadow: none !important;
+    color: white !important;
+    border: none !important;
+ } 
  .unsuccessfully {
      text-align: center;
      color: red;  
@@ -137,4 +143,17 @@
     color: #4BB543;
     display: none;
 }
+.comment {
+    background-color: white;
+    border-style: solid;
+    border-color:#C8C8C8;
+    border-radius: 25px;
+}
+.comments {
+    display: none;
+}
+.cbutton {
+    border-radius: 25px;
+}
+
 

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react"
 import ListOfPosts from "../listOfPosts/ListOfPosts";
 
-const HomePage = ({ selectedAccount, posts, accounts, currentAccount, addNewPost, addPlus, addMinus }) => {
+
+const HomePage = ({ setPosts,selectedAccount, posts, accounts, currentAccount, addNewPost, addPlus, addMinus,comments, setComments }) => {
 
 
 
@@ -17,12 +18,12 @@ const HomePage = ({ selectedAccount, posts, accounts, currentAccount, addNewPost
         let minutes = d.getMinutes()
         let date = day + "/" + month + "/" + year
         let time = hours + ":" + minutes
-        let idP = posts.length + 1
+        let idP = (posts.length + 1).toString()
+        console.log("bla")
 
+       // const inputText = document.querySelector('#text-input').value
+        const inputText = "ahahhahahahaha"
 
-
-
-        const inputText = document.querySelector('#text-input').value
         setNewPost({
             idpost: idP, idcreator: currentAccount.id, naslov: "titel1", text: inputText,
             date: date, time: time, plus: [], minus: []
@@ -49,14 +50,12 @@ const HomePage = ({ selectedAccount, posts, accounts, currentAccount, addNewPost
                                             <div className="col-lg-12 mt-2">
 
                                                 <button onClick={() => { publish1() }} className="btn btn-light form-control">Publish</button>
-
-
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <ListOfPosts selectedAccount={selectedAccount} currentAccount1={currentAccount} addMinus={addMinus} addPlus={addPlus} posts={posts} accounts={accounts} />
+                                <ListOfPosts publish={publish} setPosts={setPosts} setComments={setComments} comments={comments} selectedAccount={selectedAccount} currentAccount1={currentAccount} addMinus={addMinus} addPlus={addPlus} posts={posts} accounts={accounts} />
                             </div>
                             <div className="col-lg-1">
                                 <div className="col-12 dva">
